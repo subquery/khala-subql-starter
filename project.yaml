@@ -1,14 +1,21 @@
-specVersion: 0.2.0
+specVersion: 1.0.0
 name: khala-subql-starter
-version: 0.0.4
+version: 0.0.5
+runner:
+  node:
+    name: '@subql/node'
+    version: '*'
+  query:
+    name: '@subql/query'
+    version: '*'
 description: This project can be use as a starting point for khala network.
-repository: https://github.com/subquery/khala-subql-starter
+repository: 'https://github.com/subquery/khala-subql-starter'
 schema:
   file: ./schema.graphql
 network:
-  endpoint: wss://khala.api.onfinality.io/public-ws
-  genesisHash: '0xd43540ba6d3eb4897c28a77d48cb5b729fea37603cbbfc7a86a73b72adb3be8d'
-  dictionary: https://api.subquery.network/sq/subquery/khala-dictionary
+  chainId: '0xd43540ba6d3eb4897c28a77d48cb5b729fea37603cbbfc7a86a73b72adb3be8d'
+  endpoint: 'wss://khala.api.onfinality.io/public-ws'
+  dictionary: 'https://api.subquery.network/sq/subquery/khala-dictionary'
   chaintypes:
     file: ./dist/chaintypes.js
 dataSources:
